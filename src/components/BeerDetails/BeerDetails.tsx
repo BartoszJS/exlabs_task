@@ -8,8 +8,6 @@ import Loader from "../Loader/Loader";
 const BeerDetails: React.FC = () => {
   const [beer, setBeer] = useState<Beer | null>(null);
   const { beerId } = useParams<{ beerId: string }>();
-  const pageNumber = beer ? Math.ceil(beer.id / 12) : null;
-  console.log(pageNumber);
 
   useEffect(() => {
     const fetchBeerDetailsData = async () => {
@@ -69,7 +67,7 @@ const BeerDetails: React.FC = () => {
             <div className={styles.details__description_button}>
               <Link
                 className={styles.details__description_button_link}
-                to={`/beer-list?page=${pageNumber}`}
+                to='/beer-list'
               >
                 Back to list
               </Link>
