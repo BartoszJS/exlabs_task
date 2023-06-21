@@ -65,7 +65,10 @@ const BeerDetails: React.FC = () => {
               </div>
             </div>
             <div className={styles.details__description_button}>
-              <Link className={styles.details__description_button_link} to='/'>
+              <Link
+                className={styles.details__description_button_link}
+                to='/exlabs_task'
+              >
                 Back to list
               </Link>
             </div>
